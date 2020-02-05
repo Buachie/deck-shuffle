@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  width: 50%;
+  margin: 0 auto;
+}
+.card {
+  height: 300px;
+  -webkit-box-shadow: 3px 3px 13px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 13px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 13px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  display: flex;
+}
+
+.suitspades {
+  background: url(img/spade.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 110px;
+  height: 130px;
+  align-self: center;
+  justify-self: center;
+}
+.suithearts {
+  background: url(img/heart.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 120px;
+  height: 110px;
+  align-self: center;
+  justify-self: center;
+}
+.suitclubs {
+  background: url(img/club.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 120px;
+  height: 125px;
+  align-self: center;
+  justify-self: center;
+}
+.suitdiamonds {
+  background: url(img/diamond.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 110px;
+  height: 130px;
+  align-self: center;
+  justify-self: center;
+}
+.value {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  height: fit-content;
+  padding: 0.2em;
+}
