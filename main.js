@@ -3,11 +3,12 @@ var suits = ["spades", "hearts", "clubs", "diamonds"];
 var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 function createDeck() {
-  for (let i = 0; i < suits.length; i++) {
-    for (let j = 0; j < values.length; j++) {
+  //Set i/j to less than the number of cards you want to print. If you want to print the whold deck, set i < suits.length and j < values.length
+  for (let i = 0; i < 1; i++) {
+    for (let j = 0; j < 1; j++) {
       var card = {
-        Value: values[Math.random() * Math.ceil(j)],
-        Suit: suits[Math.random() * Math.ceil(i)]
+        Value: values[Math.floor(Math.random() * values.length)],
+        Suit: suits[Math.floor(Math.random() * suits.length)]
       };
       deck.push(card);
     }
@@ -33,8 +34,5 @@ function renderDeck() {
   }
 }
 
-function randomizer() {
-  rand = Math.random(52);
-}
 createDeck();
 renderDeck();
