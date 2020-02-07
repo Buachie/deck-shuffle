@@ -1,6 +1,9 @@
 var deck = new Array();
 var suits = ["spades", "hearts", "clubs", "diamonds"];
 var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+var usedSuits = [];
+var usedValues = [];
+var shuffleButton = document.getElementById("shuffle");
 
 function createDeck() {
   //Set i/j to less than the number of cards you want to print. If you want to print the whold deck, set i < suits.length and j < values.length
@@ -10,7 +13,19 @@ function createDeck() {
         Value: values[Math.floor(Math.random() * values.length)],
         Suit: suits[Math.floor(Math.random() * suits.length)]
       };
+      console.log(card.Suit, card.Value);
+      console.log(usedSuits, usedValues);
+
       deck.push(card);
+      for (let y = 0; y < usedSuits; y++) {
+        for (let t = 0; t < usedValues; t++) {
+          if (usedSuits[y] == card.Suit && usedValues[t] == card.Value) {
+            createDeck();
+          }
+        }
+      }
+      usedSuits += suits.slice(i);
+      usedValues += values.slice(j);
     }
   }
   return deck;
@@ -34,5 +49,19 @@ function renderDeck() {
   }
 }
 
+function removeCard() {
+  for (i = 0; i < suits.length; i++) {
+    for (j = 0; j < values.length; j++) {
+      if (suits[i] == Suit && values[j] == Value) {
+      }
+    }
+  }
+}
+
+shuffleButton.addEventListener("click", function() {
+  deck.length = 0; //Resets the deck array (Removes all cards)
+  createDeck();
+  renderDeck();
+});
 createDeck();
 renderDeck();

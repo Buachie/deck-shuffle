@@ -5,15 +5,18 @@
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: auto;
   grid-template-rows: auto;
   grid-gap: 1em;
   width: 50%;
@@ -29,6 +32,7 @@ body {
   border-radius: 15px;
   display: flex;
   position: relative;
+  margin: 2em auto;
 }
 
 .suitspades {
@@ -79,6 +83,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   position: absolute;
+  top: 0;
+  left: 0;
   height: fit-content;
   padding: 0.2em;
+}
+
+.button {
+  width: max-content;
+  margin: 0 auto;
+}
+#shuffle {
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 11px -2px rgba(0, 0, 0, 0.75);
+  padding: 7px;
+  margin: 0 auto;
 }
